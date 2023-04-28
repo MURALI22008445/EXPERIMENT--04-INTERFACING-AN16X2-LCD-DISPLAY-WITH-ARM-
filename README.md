@@ -169,32 +169,54 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
 ![image](https://user-images.githubusercontent.com/36288975/233856904-99eb708a-c907-4595-9025-c9dbd89b8879.png)
 
 ## CIRCUIT DIAGRAM 
-![image](https://user-images.githubusercontent.com/36288975/233857974-bda6200e-4f88-4e7b-b189-4da80210fa23.png)
+![muralis exp 4](https://user-images.githubusercontent.com/119643767/235177779-3eebbd83-b27a-4a30-8935-0173997f849d.png)
+
 
 
 ## STM 32 CUBE PROGRAM :
 
 ```
 #include "main.h"
-#include "lcd.h"
-void SystemClock_Config(void);
-static void MX_GPIO_Init(void);
+#include"lcd.h"
+
 int main(void)
 {
+  
   HAL_Init();
-  SystemClock_Config();
+
+  
   MX_GPIO_Init();
-  	  Lcd_PortType ports[]={GPIOA,GPIOA,GPIOA,GPIOA};
-  	  Lcd_PinType pins[]={GPIO_PIN_3,GPIO_PIN_2,GPIO_PIN_1,GPIO_PIN_0};
-  	  Lcd_HandleTypeDef lcd;
-  	  lcd=Lcd_create(ports,pins,GPIOB,GPIO_PIN_0,GPIOB,GPIO_PIN_1,LCD_4_BIT_MODE);
-  	  Lcd_cursor(&lcd,0,1);
-  	  Lcd_string(&lcd,"SEC - AIML");
+ 
+  Lcd_PortType ports[] = { GPIOA, GPIOA, GPIOA, GPIOA };
+  Lcd_PinType pins[] = {GPIO_PIN_3, GPIO_PIN_2, GPIO_PIN_1, GPIO_PIN_0};
+  Lcd_HandleTypeDef lcd;
+  lcd = Lcd_create(ports, pins, GPIOB, GPIO_PIN_0, GPIOB, GPIO_PIN_1, LCD_4_BIT_MODE);
+  Lcd_cursor(&lcd, 0,1);
+  Lcd_string(&lcd, "DEPT- AI&DS");
+ 
   while (1)
   {
-    	Lcd_cursor(&lcd,1,1);
-    	  	  Lcd_string(&lcd,"G.Chethan Kumar");
+    
   }
+ }
+    
+
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  {
+    Error_Handler();
+  }
+}
+
+
+}
+void Error_Handler(void)
+{
+ 
+  __disable_irq();
+  while (1)
+  {
+  }
+
 }
 
 Programmed by: murali.S
@@ -203,15 +225,12 @@ Register no. : 212222230088
 
 
 ## Output screen shots of proteus  :
-![pmc exp 3 2](https://user-images.githubusercontent.com/119643767/235080121-13c5f7b3-395c-4811-9124-d3b812afcae0.jpg)
+![4 pmc exp 4 1](https://user-images.githubusercontent.com/119643767/235178019-714fb2b8-c64d-42a9-a67c-ffec47351e8b.png)
 
 
  
  
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
- 
- ![pmc exp 3 1](https://user-images.githubusercontent.com/119643767/235080325-c78865ed-ba7f-4763-98b4-5ca3470931d7.jpg)
-
  
  
 ## Result :
