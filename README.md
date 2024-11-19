@@ -1,5 +1,5 @@
 # EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM AND DISPLAY STRING
-#### NAME: MURALI S 
+#### NAME: MURALI S
 #### REG: 212222230088
 #### DATE: 
 ## Aim: To Interface a 16X2 LCD display to ARM controller  , and simulate it in Proteus 
@@ -161,9 +161,9 @@ static void MX_GPIO_Init(void);
 void lcd_display()
 {
 	Lcd_cursor(&lcd,0,1);
-	Lcd_string(&lcd,"ADHITHYARAM D\n");
+	Lcd_string(&lcd,"MURALI D\n");
 	Lcd_cursor(&lcd,1,1);
-	Lcd_string(&lcd,"212222230008");
+	Lcd_string(&lcd,"212222230088");
 
 }
 int main(void)
